@@ -7,9 +7,14 @@
 </head>
 
 <body>
-  <input id="cardnumber"></input>
-  <button onclick="validate()">Validar</button>
-  <div id="result"></div>
+  <!-- formulario --> 
+  <form>
+    <label for="creditCard"> Numero de Tarjeta </label>
+    <input type="number" id="cardnumber" required min="0" maxlength="16"></input>
+    <button onclick="validate()">Validar</button>
+    <div id="result"></div>
+</form>
+
   <script lang="javascript">
     function validate() {
       const valid = isValid(document.getElementById("cardnumber").value)
