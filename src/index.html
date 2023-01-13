@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- formulario --> 
-  <form>
+  <form class="formularioTarjeta">
     <label for="creditCard"> Numero de Tarjeta </label>
     <input type="number" id="cardnumber" required min="0" maxlength="16"></input>
     <button onclick="validate()">Validar</button>
