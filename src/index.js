@@ -1,20 +1,18 @@
-// Boton de espera 
-
-const myButton = document.getElementById('myButton');
- 
-myButton.addEventListener('click', function() {
-    myButton.disabled = true;
-    myButton.style.opacity = 0.7;
-    myButton.textContent = 'Ejecutando proceso...';
-
 // Validar si es un numero 
 
 function validarNumero() {
     var numeroTarjeta = document.getElementById("cardNumber");
-    if(typeof numeroTarjeta === "number") {
-        alert("Sus datos están siendo procesados");    
+    if(!isNaN (numeroTarjeta)) {
+        document.write("Sus datos están siendo procesados");    
     } 
     else {
-        alert("Solo se admiten números");   
+        document.write("Solo se admiten números");   
     }
-} 
+}
+
+// Boton de espera 
+
+
+
+// Validar si es correcto el numero 
+
