@@ -11,30 +11,13 @@
   <!-- formulario --> 
   <form class="formularioTarjeta">
     <label for="creditCard"> Numero de Tarjeta </label>
-    <input id="cardNumber" required min="0" maxlength="16"></input>
-    <button onclick="validate()">Validar</button>
+    <input id="cardNumber" required></input>
+    <button id="myButton" onclick="validate()">Validar</button>
     <div id="result"></div>
-    <p id = "geeks"></p>
+  
   </form>
-
   <script src="index.js"></script>
-  
-  <script>
-    var down = document.getElementById('geeks');
-         
-         function GFG_Fun() {
-             var str = document.getElementById('cardNumber').value;
-             res = [];
-              
-             for (var i = 0, len = str.length; i < len; i += 1) {
-                 res.push(+str.charAt(i));
-             }
-              
-             down.innerHTML = "[" + res + "]";
-         }
-  </script>
-
-  
+    
 </body>
 
 </html>
