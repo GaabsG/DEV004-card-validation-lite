@@ -11,29 +11,30 @@
   <!-- formulario --> 
   <form class="formularioTarjeta">
     <label for="creditCard"> Numero de Tarjeta </label>
-    <input type="number" id="cardnumber" required min="0" maxlength="16"></input>
+    <input id="cardNumber" required min="0" maxlength="16"></input>
     <button onclick="validate()">Validar</button>
     <div id="result"></div>
-</form>
+    <p id = "geeks"></p>
+  </form>
 
   <script src="index.js"></script>
   
-  <script lang="javascript">
-    function validate() {
-      const valid = isValid(document.getElementById("cardnumber").value)
-      if (valid) {
-        // Show success in div#result
-      }
-      else {
-        // Show error message in div#result
-      }
-    }
-
-    function isValid(creditCardNumber){
-      // is creditCardNumber valid?
-      return false
-    }
+  <script>
+    var down = document.getElementById('geeks');
+         
+         function GFG_Fun() {
+             var str = document.getElementById('cardNumber').value;
+             res = [];
+              
+             for (var i = 0, len = str.length; i < len; i += 1) {
+                 res.push(+str.charAt(i));
+             }
+              
+             down.innerHTML = "[" + res + "]";
+         }
   </script>
+
+  
 </body>
 
 </html>
