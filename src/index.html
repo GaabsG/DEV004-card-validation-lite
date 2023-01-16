@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarjeta de crédito válida</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,9 +12,9 @@
   <!-- formulario --> 
   <form class="formularioTarjeta">
     <label for="creditCard"> Numero de Tarjeta: </label>
-    <input id="cardNumber" required> <input/>
-    <button id="myButton" onclick="validate()">Validar</button>
-    <div id="result"></div>
+    <input type="text" name="cardNumber" id="cardNumber" maxlength="16" required>
+    <button type="submit" onclick="validate()">Validar</button>
+    
   </form>
 
   <script src="index.js"></script>
