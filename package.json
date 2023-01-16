@@ -4,10 +4,11 @@
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {
+    "test": "mocha --recursive test",
+    "bump-version": "npm version patch",
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
-    "test": "jest --verbose --coverage",
     "open-coverage-report": "opener ./coverage/lcov-report/index.html",
     "start": "serve ./src",
     "deploy": "gh-pages -d src"
@@ -31,4 +32,5 @@
     "version": "5.5.0",
     "commit": "8945fe217cdd6ce64953e97d55eeee2608ae50a7"
   }
+  
 }

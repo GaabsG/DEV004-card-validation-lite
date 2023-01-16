@@ -2,7 +2,7 @@
 function validate() {
     var numeroTarjeta = document.getElementById("cardNumber");
     if (parseInt(numeroTarjeta) === "NaN") {
-        alert("Solo se admiten números");       
+        console.log("Solo se admiten números");       
     }
 
 }
