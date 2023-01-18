@@ -10,12 +10,12 @@
 
 <body>
   <!-- formulario --> 
-  <div class="formularioTarjeta">
+  <form class="formularioTarjeta">
     <label for="creditCard"> Numero de Tarjeta: </label>
-    <input type="text" name="cardNumber" id="cardNumber" maxlength="16" required>
-    <button type="submit" onclick="validate()">Validar</button>
-    
-  </div>
+    <input type="text" name="cardNumber" id="cardNumber" maxlength="16" required> </input>
+    <button type="submit" onclick="validateNumber()"> Validar </button>
+    <div id="result"> </div>
+  </form>
 
   <script src="index.js"></script>
     
