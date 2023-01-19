@@ -1,12 +1,11 @@
 // Validar si es un numero
 function validateNumber() {
-    const parsed = parseInt(document.getElementById("cardNumber").value);
+    const parsed = document.getElementById("cardNumber").value;
     // Condicional que alerta si es o no es un numero    
     if (isNaN(parsed)) {
         alert("Solo se aceptan numeros");
     }
     else {
-        // alert("Estamos procesando sus datos...");
         isValid(parsed);
     }
 }
@@ -17,7 +16,7 @@ function isValid(numeroDeTarjeta) {
     let reversa = dividir.reverse(); // Reversa
     let suma = 0; // Variable para sumar mas adelante
     console.log("El num se divide " + dividir); // El num se divide 
-    console.log("El numero esta en reversa " + reversa)
+    console.log("El numero esta en reversa " + reversa);
     // Loop para doblar cada dos digitos     
     for (let index = 1; index < reversa.length; index += 2) {
         let doblar = Number(reversa[index]) * 2;
@@ -44,16 +43,12 @@ function isValid(numeroDeTarjeta) {
     for (let i = 0; i < reversa.length; i += 2) {
         suma += parseInt(reversa[i]);
         console.log("Suma de num ordinarios " + suma)
-    }        
+    }
+    // Condicional en la que si el residuo de una multiplicacion /10 es cero, es válida
+    if ((suma % 10) == 0) {
+        document.getElementById("result").innerHTML = "La tarjeta es válida";
+    }
+    else {
+        document.getElementById("result").innerHTML = "La tarjeta no es válida. Intente de nuevo";
+    }
 }
-
-// Funcion para mostrar resultados
-// function validate(suma) {
-//     if ((suma % 10) == 0) {
-//         document.getElementById("result").innerHTML = "La tarjeta es válida";
-//     }
-//     else {
-//         document.getElementById("result").innerHTML = "La tarjeta no es válida. Intente de nuevo";
-//     }
-   
-// }
